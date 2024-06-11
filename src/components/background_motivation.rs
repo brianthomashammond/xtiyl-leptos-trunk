@@ -16,7 +16,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "An impassioned sermon struck a chord deep in my soul and moved me to serve the faith.",
                 5 => "I followed a childhood friend, a respected acquaintance, or someone I loved into religious service.",
                 6 => "After encountering a true servant of the gods, I was so inspired that I immediately entered the service of a religious group.",
-                _ => unreachable!(),
+                _ => unreachable!("acolyte background motivation failed"),
             }
         },
         "Charlatan" => {
@@ -27,7 +27,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I took up with a confidence artist, from whom I learned my craft.",
                 5 => "After a charlatan fleeced my family, I decided to learn the trade so I would never be fooled by such deception again.",
                 6 => "I was poor or I feared becoming poor, so I learned the tricks I needed to keep myself out of poverty.",
-                _ => unreachable!(),
+                _ => unreachable!("charlatan background motivation failed"),
             }
         },
         "Criminal" => {
@@ -38,7 +38,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "A parent or relative taught me my criminal specialty to prepare me for the family business.",
                 5 => "I left home and found a place in a thieves' guild or some other criminal organization.",
                 6 => "I was always bored, so I turned to crime to pass the time and discovered I was quite good at it.",
-                _ => unreachable!(),
+                _ => unreachable!("criminal background motivation failed"),
             }
         },
         "Entertainer" => {
@@ -49,7 +49,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I saw a bard perform once, and I knew from that moment on what I was born to do.",
                 5 => "I earned coin by performing on street corners and eventually made a name for myself.",
                 6 => "A traveling entertainer took me in and taught me the trade.",
-                _ => unreachable!(),
+                _ => unreachable!("entertainer background motivation failed"),
             }
         },
         "Folk Hero" => {
@@ -60,7 +60,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "A parent or one of my relatives was an adventurer, and I was inspired by that person's courage.",
                 5 => "A mad old hermit spoke a prophecy when I was born, saying that I would accomplish great things.",
                 6 => "I have always stood up for those who are weaker than I am.",
-                _ => unreachable!(),
+                _ => unreachable!("folk hero background motivation failed"),
             }
         },
         "Guild Artisan" => {
@@ -71,7 +71,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I was always good with my hands, so I took the opportunity to learn a trade.",
                 5 => "I wanted to get away from my home situation and start a new life.",
                 6 => "I learned the essentials of my craft from a mentor but had to join the guild to finish my training.",
-                _ => unreachable!(),
+                _ => unreachable!("guild artisan background motivation failed"),
             }
         },
         "Hermit" => {
@@ -82,7 +82,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I felt compelled to forsake my past, but did so with great reluctance, and sometimes I regret making that decision.",
                 5 => "I lost everything-my home, my family, my friends. Going it alone was all I could do.",
                 6 => "Society's decadence disgusted me, so I decided to leave it behind.",
-                _ => unreachable!(),
+                _ => unreachable!("hermit background motivation failed"),
             }
         },
         "Noble" => {
@@ -93,7 +93,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "My family has a title, but none of my ancestors have distinguished themselves since we gained it.",
                 5 => "My family is filled with remarkable people. I hope to live up to their example.",
                 6 => "I hope to increase my family's power and influence.",
-                _ => unreachable!(),
+                _ => unreachable!("noble background motivation failed"),
             }
         },
         "Outlander" => {
@@ -104,7 +104,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "My people lived on the edges of civilization, and I learned the methods of survival from my family.",
                 5 => "After a tragedy I retreated to the wilderness, leaving my old life behind.",
                 6 => "My family moved away from civilization, and I learned to adapt to my new environment.",
-                _ => unreachable!(),
+                _ => unreachable!("outlander background motivation failed"),
             }
         },
         "Sage" => {
@@ -115,7 +115,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I discovered an old library and pored over the texts I found there. That experience awakened a hunger for more knowledge.",
                 5 => "I impressed a wizard who told me I was squandering my talents and should seek out an education to take advantage of my gifts.",
                 6 => "One of my parents or a relative gave me a basic education that whetted my appetite, and I left home to build on what I had learned.",
-                _ => unreachable!(),
+                _ => unreachable!("sage background motivation failed"),
             }
         },
         "Sailor" => {
@@ -126,7 +126,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "I needed to escape my community quickly, so I stowed away on a ship. When the crew found me, I was forced to work for my passage.",
                 5 => "Reavers attacked my community, so I found refuge on a ship until I could seek vengeance.",
                 6 => "I had few prospects where I was living, so I left to find my fortune elsewhere.",
-                _ => unreachable!(),
+                _ => unreachable!("sailor background motivation failed"),
             }
         },
         "Soldier" => {
@@ -137,7 +137,7 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "War ravaged my homeland while I was growing up. Fighting was the only life I ever knew.",
                 5 => "I wanted fame and fortune, so I joined a mercenary company, selling my sword to the highest bidder.",
                 6 => "Invaders attacked my homeland. It was my duty to take up arms in defense of my people.",
-                _ => unreachable!(),
+                _ => unreachable!("soldier background motivation failed"),
             }
         },
         "Urchin" => {
@@ -148,10 +148,10 @@ pub fn BackgroundMotivation() -> impl IntoView {
                 4 => "A notorious thief looked after me and other orphans, and we spied and stole to earn our keep.",
                 5 => "One day I woke up on the streets, alone and hungry, with no memory of my early childhood.",
                 6 => "My parents died, leaving no one to look after me. I raised myself.",
-                _ => unreachable!(),
+                _ => unreachable!("urchin background motivation failed"),
             }
         },
-        _ => unreachable!(),
+        _ => unreachable!("background motivation failed"),
     };
 
     view! {

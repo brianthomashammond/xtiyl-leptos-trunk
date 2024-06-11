@@ -41,7 +41,7 @@ pub fn ParentKnowledge() -> impl IntoView {
 
             ParentKnowledge::Unknown.as_str()
         },
-        _ => unreachable!(),
+        _ => unreachable!("parent knowledge failed"),
     };
 
 
@@ -52,31 +52,31 @@ pub fn ParentKnowledge() -> impl IntoView {
                     match roll_die(2) {
                         1 => ("Elf", "Human"),
                         2 => ("Human", "Elf"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-elf parent race 1 failed"),
                     }
                 },
                 6 => {
                     match roll_die(2) {
                         1 => ("Elf", "Half-Elf"),
                         2 => ("Half-Elf", "Elf"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-elf parent race 2 failed"),
                     } 
                 },
                 7 => {
                     match roll_die(2) {
                         1 => ("Half-Elf", "Human"),
                         2 => ("Human", "Half-Elf"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-elf parent race 3 failed"),
                     } 
                 },
                 8 => {
                     match roll_die(2) {
                         1 => ("Half-Elf", "Half-Elf"),
                         2 => ("Half-Elf", "Half-Elf"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-elf parent race 4 failed"),
                     } 
                 },
-                _ => unreachable!(),
+                _ => unreachable!("half-elf parent race 5 failed"),
             }
         },
         "Half-Orc" => {
@@ -85,31 +85,31 @@ pub fn ParentKnowledge() -> impl IntoView {
                     match roll_die(2) {
                         1 => ("Orc", "Human"),
                         2 => ("Human", "Orc"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-orc parent race 1 failed"),
                     }
                 },
                 6 => {
                     match roll_die(2) {
                         1 => ("Orc", "Half-Orc"),
                         2 => ("Half-Orc", "Orc"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-orc parent race 2 failed"),
                     } 
                 },
                 7 => {
                     match roll_die(2) {
                         1 => ("Half-Orc", "Human"),
                         2 => ("Human", "Half-Orc"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-orc parent race 3 failed"),
                     } 
                 },
                 8 => {
                     match roll_die(2) {
                         1 => ("Half-Orc", "Half-Orc"),
                         2 => ("Half-Orc", "Half-Orc"),
-                        _ => unreachable!(),
+                        _ => unreachable!("half-orc parent race 4 failed"),
                     } 
                 },
-                _ => unreachable!(),
+                _ => unreachable!("half-orc parent race 5 failed"),
             }
         },
         "Tiefling" => {
@@ -119,24 +119,24 @@ pub fn ParentKnowledge() -> impl IntoView {
                     match roll_die(2) {
                         1 => ("Tiefling", "Human"),
                         2 => ("Human", "Tiefling"),
-                        _ => unreachable!(),
+                        _ => unreachable!("tiefling parent race 1 failed"),
                     } 
                 },
                 7 => {
                     match roll_die(2) {
                         1 => ("Tiefling", "Devil"),
                         2 => ("Devil", "Tiefling"),
-                        _ => unreachable!(),
+                        _ => unreachable!("tiefling parent race 2 failed"),
                     } 
                 },
                 8 => {
                     match roll_die(2) {
                         1 => ("Human", "Devil"),
                         2 => ("Devil", "Human"),
-                        _ => unreachable!(),
+                        _ => unreachable!("tiefling parent race 3 failed"),
                     } 
                 },
-                _ => unreachable!(),
+                _ => unreachable!("tiefling parent race 4 failed"),
             }
         },
         _ => (race(), race()),

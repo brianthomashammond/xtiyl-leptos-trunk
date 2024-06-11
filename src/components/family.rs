@@ -47,7 +47,7 @@ pub fn Family() -> impl IntoView {
         36..=55 => Family::SingleFather.as_str(),
         56..=75 => Family::SingleMother.as_str(),
         76..=100 => Family::MotherFather.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("family failed"),
     };
 
     view! {

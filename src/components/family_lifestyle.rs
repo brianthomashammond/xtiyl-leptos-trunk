@@ -35,7 +35,7 @@ pub fn FamilyLifestyle() -> impl IntoView {
         13..=15 => FamilyLifestyle::Comfortable.as_str(),
         16..=17 => FamilyLifestyle::Wealthy.as_str(),
         18 => FamilyLifestyle::Aristocratic.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("family lifestyle failed"),
     };
 
     view! {

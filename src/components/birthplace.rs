@@ -86,7 +86,7 @@ pub fn Birthplace() -> impl IntoView {
         98 => Birthplace::APOEP.as_str(),
         99 => Birthplace::InnerPlane.as_str(),
         100 => Birthplace::OuterPlane.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("birthplace failed"),
     };
 
     view! {

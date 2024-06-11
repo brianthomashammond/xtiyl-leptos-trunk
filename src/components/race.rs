@@ -50,7 +50,7 @@ pub fn Race() -> impl IntoView {
         7 => Race::HalfElf.as_str(),
         8 => Race::HalfOrc.as_str(),
         9 => Race::Tiefling.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("race failed"),
     };
 
     set_race(gen_race);

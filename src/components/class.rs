@@ -59,7 +59,7 @@ pub fn Class() -> impl IntoView {
         10 => AdventuringClass::Sorcerer.as_str(),
         11 => AdventuringClass::Warlock.as_str(),
         12 => AdventuringClass::Wizard.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("adventuring class failed"),
     };
 
     set_class(gen_class);

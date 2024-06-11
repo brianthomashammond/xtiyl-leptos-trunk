@@ -35,7 +35,7 @@ pub fn Alignment() -> impl IntoView {
         3 => match roll_die(2) {
             1 => Alignment::ChaoticEvil.as_str(), 
             2 => Alignment::ChaoticNeutral.as_str(),
-            _ => unreachable!(),
+            _ => unreachable!("alignment 1 failed"),
         },
         4..=5 => Alignment::LawfulEvil.as_str(),
         6..=8 => Alignment::NeutralEvil.as_str(),
@@ -46,9 +46,9 @@ pub fn Alignment() -> impl IntoView {
         18 => match roll_die(2) {
             1 => Alignment::ChaoticGood.as_str(), 
             2 => Alignment::ChaoticNeutral.as_str(),
-            _ => unreachable!(),
+            _ => unreachable!("alignment 2 failed"),
         },
-        _ => unreachable!(),
+        _ => unreachable!("alignment 3 failed"),
     };
 
     view! {

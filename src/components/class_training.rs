@@ -16,7 +16,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I went on a spiritual journey to find myself and instead found a spirit animal to guide, protect, and inspire me.",
                 5 => "I was struck by lightning and lived. Afterward, I found a new strength within me that let me push beyond my limitations.",
                 6 => "My anger needed to be channeled into battle, or I risked becoming an indiscriminate killer.",
-                _ => unreachable!(),
+                _ => unreachable!("barbarian class training failed"),
             }
         },
         "Bard" => {
@@ -27,7 +27,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I felt a calling to recount the deeds of champions and heroes, to bring them alive in song and story.",
                 5 => "I joined one of the great colleges to learn old lore, the secrets of magic, and the art of performance.",
                 6 => "I picked up a musical instrument one day and instantly discovered that I could play it.",
-                _ => unreachable!(),
+                _ => unreachable!("bard class training failed"),
             }
         },
         "Cleric" => {
@@ -38,7 +38,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "Although I was always devout, it wasn't until I completed a pilgrimage that I knew my true calling.",
                 5 => "I used to serve in my religion's bureaucracy but found I needed to work in the world, to bring the message of my faith to the darkest corners of the land.",
                 6 => "I realize that my god works through me, and I do as commanded, even though I don't know why I was chosen to serve.",
-                _ => unreachable!(),
+                _ => unreachable!("cleric class training failed"),
             }
         },
         "Druid" => {
@@ -49,7 +49,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I befriended a druid and was moved by druidic teachings. I decided to follow my friend's guidance and give something back to the world.",
                 5 => "While I was growing up, I saw spirits all around me — entities no one else could perceive. I sought out the druids to help me understand the visions and communicate with these beings.",
                 6 => "I have always felt disgust for creatures of unnatural origin. For this reason, I immersed myself in the study of the druidic mysteries and became a champion of the natural order.",
-                _ => unreachable!(),
+                _ => unreachable!("druid class training failed"),
             }
         },
         "Fighter" => {
@@ -60,7 +60,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I joined the army and learned how to fight as part of a group.",
                 5 => "I grew up fighting, and I refined my talents by defending myself against people who crossed me.",
                 6 => "I could always pick up just about any weapon and know how to use it effectively.",
-                _ => unreachable!(),
+                _ => unreachable!("fighter class training failed"),
             }
         },
         "Monk" => {
@@ -71,7 +71,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I was overwhelmed with grief after losing someone close to me, and I sought the advice of philosophers to help me cope with my loss.",
                 5 => "I could feel that a special sort of power lay within me, so I sought out those who could help me call it forth and master it.",
                 6 => "I was wild and undisciplined as a youngster, but then I realized the error of my ways. I applied to a monastery and became a monk as a way to live a life of discipline.",
-                _ => unreachable!(),
+                _ => unreachable!("monk class training failed"),
             }
         },
         "Paladin" => {
@@ -82,7 +82,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I served as a paladin's squire, learning all I needed to swear my own sacred oath.",
                 5 => "Evil must be opposed on all fronts. I feel compelled to seek out wickedness and purge it from the world.",
                 6 => "Becoming a paladin was a natural consequence of my unwavering faith. In taking my vows, I became the holy sword of my religion.",
-                _ => unreachable!(),
+                _ => unreachable!("paladin class training failed"),
             }
         },
         "Ranger" => {
@@ -93,7 +93,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I have seen what happens when the monsters come out from the dark. I took it upon myself to become the first line of defense against the evils that lie beyond civilization's borders.",
                 5 => "I met a grizzled ranger who taught me woodcraft and the secrets of the wild lands.",
                 6 => "I served in an army, learning the precepts of my profession while blazing trails and scouting enemy encampments.",
-                _ => unreachable!(),
+                _ => unreachable!("ranger class training failed"),
             }
         },
         "Rogue" => {
@@ -104,7 +104,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "I decided to turn my natural lucky streak into the basis of a career, though I still realize that improving my skills is essential.",
                 5 => "I took up with a group of ruffians who showed m e how to get what I want through sneakiness rather than direct confrontation.",
                 6 => "I'm a sucker for a shiny bauble or a sack of coins, as long as I can get my hands on it without risking life and limb.",
-                _ => unreachable!(),
+                _ => unreachable!("rogue class training failed"),
             }
         },
         "Sorcerer" => {
@@ -115,7 +115,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "When a monster threatened one of my friends, I became filled with anxiety. I lashed out instinctively and blasted the wretched thing with a force that came from within me.",
                 5 => "Sensing something special in me, a stranger taught me how to control my gift.",
                 6 => "After I escaped from a magical conflagration, I realized that though I was unharmed, I was not unchanged. I began to exhibit unusual abilities that I am just beginning to understand.",
-                _ => unreachable!(),
+                _ => unreachable!("sorcerer class training failed"),
             }
         },
         "Warlock" => {
@@ -126,7 +126,7 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "When I was faced with a terrible crisis, I prayed to any being who would listen, and the creature that answered became my patron.",
                 5 => "My future patron visited me in my dreams and offered great power in exchange for my service.",
                 6 => "One of my ancestors had a pact with my patron, so that entity was determined to bind me to the same agreement.",
-                _ => unreachable!(),
+                _ => unreachable!("warlock class training failed"),
             }
         },
         "Wizard" => {
@@ -137,10 +137,10 @@ pub fn ClassTraining() -> impl IntoView {
                 4 => "One of my relatives was an accomplished wizard who decided I was smart enough to learn the craft.",
                 5 => "While exploring an old tomb, library, or temple, I found a spellbook. I was immediately driven to learn all I could about becoming a wizard.",
                 6 => "I was a prodigy who demonstrated mastery of the arcane arts at an early age. When I became old enough to set out on my own, I did so to learn more magic and expand my power.",
-                _ => unreachable!(),
+                _ => unreachable!("wizard class training failed"),
             }
         },
-        _ => unreachable!(),
+        _ => unreachable!("class training failed"),
     };
 
     view! {

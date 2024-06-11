@@ -62,7 +62,7 @@ pub fn Background() -> impl IntoView {
         11 => Background::Sailor.as_str(),
         12 => Background::Soldier.as_str(),
         13 => Background::Urchin.as_str(),
-        _ => unreachable!(),
+        _ => unreachable!("background failed"),
     };
 
     set_background(gen_background);

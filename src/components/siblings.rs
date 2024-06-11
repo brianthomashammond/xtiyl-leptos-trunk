@@ -15,13 +15,22 @@ pub fn Siblings() -> impl IntoView {
         5..=6 => rand::thread_rng().gen_range(1..=4) + 1,
         7..=8 => rand::thread_rng().gen_range(1..=6) + 2,
         9..=10 => rand::thread_rng().gen_range(1..=8) + 3,
-        _ => unreachable!(),
+        _ => unreachable!("number of siblings failed"),
     };
 
-    let number_of_siblings = match race() {
-        "Dwarf" => max(number_of_siblings - 2, 0),
-        "Elf" => max(number_of_siblings - 2,0),
-        _ => number_of_siblings,
+    let number_of_siblings = match number_of_siblings {
+        0..=1 => {
+            match race() {
+                "Dwarf" => 0,
+                "Elf" => 0,
+                _ => number_of_siblings,
+            }
+        },
+        _ => match race() {
+            "Dwarf" => max(number_of_siblings - 2, 0),
+            "Elf" => max(number_of_siblings - 2,0),
+            _ => number_of_siblings,
+        }
     };
 
     view! {
@@ -35,7 +44,7 @@ pub fn Siblings() -> impl IntoView {
                         match roll_die(2) {
                             1 => "Brother",
                             2 => "Sister",
-                            _ => unreachable!(),
+                            _ => unreachable!("sibling gender failed"),
                         }
                     });
                     view! {
@@ -61,7 +70,7 @@ pub fn SiblingAge() -> impl IntoView {
         2 => age(),
         3..=7 => age() + rand::thread_rng().gen_range(1..=10),
         8..=12 => age() - rand::thread_rng().gen_range(1..=10),
-        _ => unreachable!(),
+        _ => unreachable!("sibling age failed"),
     };
 
     let occupation = match sibling_age {
@@ -81,7 +90,7 @@ pub fn SiblingAge() -> impl IntoView {
                 10 => "Sorcerer",
                 11 => "Warlock",
                 12 => "Wizard",
-                _ => unreachable!(),
+                _ => unreachable!("sibling adventurer occupation failed"),
             },
             11 => "Aristocrat",
             12..=26 => "Artisan or guild member",
@@ -97,7 +106,7 @@ pub fn SiblingAge() -> impl IntoView {
             86..=90 => "Priest",
             91..=95 => "Sailor",
             96..=100 => "Soldier",
-            _ => unreachable!(),
+            _ => unreachable!("sibling occupation failed"),
         }
     };
 
