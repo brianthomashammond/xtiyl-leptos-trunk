@@ -1,4 +1,5 @@
 use alignment::Alignment;
+use relationship::Relationship;
 
 use super::*;
 
@@ -52,6 +53,7 @@ pub fn Siblings() -> impl IntoView {
                         <p>"Sibling: "{gender}</p>
                         <Alignment />
                         <SiblingAge />
+                        <Relationship />
                     }
                 }
             />

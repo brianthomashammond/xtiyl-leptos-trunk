@@ -9,6 +9,7 @@ pub mod family;
 pub mod family_lifestyle;
 pub mod parent_knowledge;
 pub mod race;
+pub mod relationship;
 pub mod siblings;
 
 use leptos::*;
