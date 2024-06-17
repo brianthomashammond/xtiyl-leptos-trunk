@@ -1,0 +1,17 @@
+strict digraph flow {
+    PlayerClass -> PlayerClassTraining;
+    Background;
+    Age -> { LifeEventsByAge SiblingBirthOrder Siblings };
+    PlayerRace -> { Siblings NonHumanParents };
+    ParentKnowledge -> Parents;
+    FamilyLifestyle -> ChildhoodHome;
+    ChildhoodMemories;
+    Siblings -> { SiblingBirthOrder SiblingOccupation SiblingAlignment SiblingStatus };
+    Parents -> { NonHumanParents ParentOccupation Family Birthplace AbsentParent ParentAlignment };
+    LifeEventsByAge -> LifeEvents;
+    LifeEvents -> { Tragedy Boon Love Enemy Friend Work Contact Adventure Supernatural War Crime Arcane Weird };
+    SiblingOccupation -> SiblingClass;
+    SiblingStatus -> SiblingCauseOfDeath;
+    AbsentParent -> ParentCauseOfDeath;
+    ParentOccupation -> ParentClass;
+}
