@@ -1,14 +1,66 @@
 strict digraph flow {
+    PlayerClass [color=green, penwidth=4];
+    Background [color=green, penwidth=4];
+    ParentKnowledge [color=green, penwidth=4];
+    FamilyLifestyle [color=green, penwidth=4];
+    ChildhoodMemories [color=red, penwidth=4];
+
+    PlayerClassTraining [color=green, penwidth=4];
+    Age [color=green, penwidth=4];
+    PlayerRace [color=green, penwidth=4];
+    Parents [color=green, penwidth=4];
+    ChildhoodHome [color=red, penwidth=4];
+
+    LifeEventsByAge [color=red, penwidth=4];
+    Siblings [color=green, penwidth=4];
+    ParentAge [color=red, penwidth=4];
+    NonHumanParents [color=green, penwidth=4];
+    ParentOccupation [color=red, penwidth=4];
+    ParentName [color=red, penwidth=4];
+    Family [color=orange, penwidth=4];
+    Birthplace [color=green, penwidth=4];
+    AbsentParent [color=red, penwidth=4];
+    ParentAlignment [color=red, penwidth=4];
+    ParentRelationship [color=red, penwidth=4];
+
+    LifeEvents [color=red, penwidth=4];
+    SiblingBirthOrder [color=orange, penwidth=4];
+    SiblingRelationship [color=green, penwidth=4];
+    SiblingName [color=red, penwidth=4];
+    SiblingOccupation [color=green, penwidth=4];
+    SiblingAlignment [color=green, penwidth=4];
+    SiblingStatus [color=red, penwidth=4];
+    ParentClass [color=red, penwidth=4];
+    ParentCauseOfDeath [color=red, penwidth=4];
+
+    Tragedy [color=red, penwidth=4];
+    Boon [color=red, penwidth=4];
+    Love [color=red, penwidth=4];
+    Enemy [color=red, penwidth=4];
+    Friend [color=red, penwidth=4];
+    Work [color=red, penwidth=4];
+    Contact [color=red, penwidth=4];
+    Adventure [color=red, penwidth=4];
+    Supernatural [color=red, penwidth=4];
+    War [color=red, penwidth=4];
+    Crime [color=red, penwidth=4];
+    Arcane [color=red, penwidth=4];
+    Weird [color=red, penwidth=4];
+    SiblingAge [color=green, penwidth=4];
+    SiblingClass [color=green, penwidth=4];
+    SiblingCauseOfDeath [color=red, penwidth=4];
+
     PlayerClass -> PlayerClassTraining;
     Background;
-    Age -> { LifeEventsByAge SiblingBirthOrder Siblings };
+    Age -> { LifeEventsByAge SiblingBirthOrder Siblings ParentAge};
     PlayerRace -> { Siblings NonHumanParents };
     ParentKnowledge -> Parents;
     FamilyLifestyle -> ChildhoodHome;
     ChildhoodMemories;
-    Siblings -> { SiblingBirthOrder SiblingOccupation SiblingAlignment SiblingStatus };
-    Parents -> { NonHumanParents ParentOccupation Family Birthplace AbsentParent ParentAlignment };
+    Siblings -> { SiblingBirthOrder SiblingRelationship SiblingName SiblingOccupation SiblingAlignment SiblingStatus };
+    Parents -> { ParentAge NonHumanParents ParentOccupation ParentName Family Birthplace AbsentParent ParentAlignment ParentRelationship};
     LifeEventsByAge -> LifeEvents;
+    SiblingBirthOrder -> SiblingAge;
     LifeEvents -> { Tragedy Boon Love Enemy Friend Work Contact Adventure Supernatural War Crime Arcane Weird };
     SiblingOccupation -> SiblingClass;
     SiblingStatus -> SiblingCauseOfDeath;
