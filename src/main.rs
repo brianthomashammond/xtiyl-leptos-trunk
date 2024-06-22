@@ -36,11 +36,12 @@ fn App() -> impl IntoView {
         <ClassTraining />
         <BackgroundMotivation />
         <hr />
-        <ParentKnowledge />
-        <hr />
         <Family />
         <Birthplace />
         <FamilyLifestyle />
+        <hr />
+        <ParentKnowledge />
+        <hr />
         <Siblings />
     }
 }

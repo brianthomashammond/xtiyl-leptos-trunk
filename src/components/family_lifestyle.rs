@@ -38,9 +38,36 @@ pub fn FamilyLifestyle() -> impl IntoView {
         _ => unreachable!("family lifestyle failed"),
     };
 
+    let lifestyle_modifier = match lifestyle{
+        "Wretched" => -40,
+        "Squalid" => -20,
+        "Poor" => -10,
+        "Modest" => 0,
+        "Comfortable" => 10,
+        "Wealthy" => 20,
+        "Aristocratic" => 40,
+        _ => unreachable!("lifestyle modifier failed"),
+    };
+
+    let childhood_home = match roll_die(100) + lifestyle_modifier {
+        i32::MIN..=0 => "On the streets",
+        1..=20 => "Rundown shack",
+        21..=30 => "No permanent residence; you moved around a lot",
+        31..=40 => "Encampment or village in the wilderness",
+        41..=50 => "Apartment in a rundown neighborhood",
+        51..=70 => "Small house",
+        71..=90 => "Large house",
+        91..=110 => "Mansion",
+        111..=i32::MAX => "Palace or castle",
+        _ => unreachable!("childhood home failed"),
+    };
+
+
+
     view! {
         <div>
             <p>"Family Lifestyle: "{lifestyle}</p>
+            <p>"Childhood Home: "{childhood_home}</p>
         </div>
     }
 }

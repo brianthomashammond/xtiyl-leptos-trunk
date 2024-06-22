@@ -7,9 +7,10 @@ strict digraph flow {
 
     PlayerClassTraining [color=green, penwidth=4];
     Age [color=green, penwidth=4];
+    PlayerName [color=red, penwidth=4];
     PlayerRace [color=green, penwidth=4];
     Parents [color=green, penwidth=4];
-    ChildhoodHome [color=red, penwidth=4];
+    ChildhoodHome [color=green, penwidth=4];
 
     LifeEventsByAge [color=red, penwidth=4];
     Siblings [color=green, penwidth=4];
@@ -53,7 +54,7 @@ strict digraph flow {
     PlayerClass -> PlayerClassTraining;
     Background;
     Age -> { LifeEventsByAge SiblingBirthOrder Siblings ParentAge};
-    PlayerRace -> { Siblings NonHumanParents };
+    PlayerRace -> { PlayerName Siblings NonHumanParents ParentName};
     ParentKnowledge -> Parents;
     FamilyLifestyle -> ChildhoodHome;
     ChildhoodMemories;
