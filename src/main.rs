@@ -37,6 +37,7 @@ fn App() -> impl IntoView {
         <BackgroundMotivation />
         <hr />
         <ParentKnowledge />
+        <hr />
         <Family />
         <Birthplace />
         <FamilyLifestyle />

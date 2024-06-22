@@ -13,15 +13,15 @@ strict digraph flow {
 
     LifeEventsByAge [color=red, penwidth=4];
     Siblings [color=green, penwidth=4];
-    ParentAge [color=red, penwidth=4];
+    ParentAge [color=green, penwidth=4];
     NonHumanParents [color=green, penwidth=4];
-    ParentOccupation [color=red, penwidth=4];
+    ParentOccupation [color=green, penwidth=4];
     ParentName [color=red, penwidth=4];
     Family [color=orange, penwidth=4];
     Birthplace [color=green, penwidth=4];
     AbsentParent [color=red, penwidth=4];
-    ParentAlignment [color=red, penwidth=4];
-    ParentRelationship [color=red, penwidth=4];
+    ParentAlignment [color=green, penwidth=4];
+    ParentRelationship [color=green, penwidth=4];
 
     LifeEvents [color=red, penwidth=4];
     SiblingBirthOrder [color=orange, penwidth=4];
@@ -30,7 +30,7 @@ strict digraph flow {
     SiblingOccupation [color=green, penwidth=4];
     SiblingAlignment [color=green, penwidth=4];
     SiblingStatus [color=red, penwidth=4];
-    ParentClass [color=red, penwidth=4];
+    ParentClass [color=green, penwidth=4];
     ParentCauseOfDeath [color=red, penwidth=4];
 
     Tragedy [color=red, penwidth=4];

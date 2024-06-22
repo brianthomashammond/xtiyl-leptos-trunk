@@ -1,3 +1,6 @@
+use alignment::Alignment;
+use relationship::Relationship;
+
 use super::*;
 
 #[derive(Debug)]
@@ -149,8 +152,66 @@ pub fn ParentKnowledge() -> impl IntoView {
                 when=move || { parent_knowledge() }
             >
                 <p>"Mother's Race: "{race_mom}</p>
+                <Alignment />
+                <ParentAge />
+                <Relationship />
+                <hr />
                 <p>"Father's Race: "{race_dad}</p>
+                <Alignment />
+                <ParentAge />
+                <Relationship />
             </Show>
+        </div>
+    }
+}
+
+#[component]
+pub fn ParentAge() -> impl IntoView {
+    let state = use_context::<RwSignal<GlobalState>>()
+        .expect("state to have been provided");
+
+    let age = create_memo(move |_| state.get().age);
+
+    let parent_age = age() + 18 + rand::thread_rng().gen_range(0..=30);
+
+    let occupation =  match roll_die(100) {
+        1..=5 => "Academic",
+        6..=10 => match roll_die(12) {
+            1 => "Barbarian",
+            2 => "Bard",
+            3 => "Cleric",
+            4 => "Druid",
+            5 => "Fighter",
+            6 => "Monk",
+            7 => "Paladin",
+            8 => "Ranger",
+            9 => "Rogue",
+            10 => "Sorcerer",
+            11 => "Warlock",
+            12 => "Wizard",
+            _ => unreachable!("sibling adventurer occupation failed"),
+        },
+        11 => "Aristocrat",
+        12..=26 => "Artisan or guild member",
+        27..=31 => "Criminal",
+        32..=36 => "Entertainer",
+        37..=38 => "Exile, hermit, or refugee",
+        39..=43 => "Explorer or wanderer",
+        44..=55 => "Farmer or herder",
+        56..=60 => "Hunter or trapper",
+        61..=75 => "Laborer",
+        76..=80 => "Merchant",
+        81..=85 => "Politician or bureaucrat",
+        86..=90 => "Priest",
+        91..=95 => "Sailor",
+        96..=100 => "Soldier",
+        _ => unreachable!("sibling occupation failed"),
+    };
+
+    view! {
+        <div>
+            <p>"Age: " {parent_age}</p>
+            <p>"Occupation: " {occupation}</p>
         </div>
     }
 }
