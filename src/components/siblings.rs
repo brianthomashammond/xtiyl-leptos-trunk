@@ -1,7 +1,10 @@
 use alignment::Alignment;
 use relationship::Relationship;
 
-use crate::names::dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES};
+use crate::names::{
+    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
+    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
+};
 
 use super::*;
 
@@ -71,13 +74,15 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
     match gender {
         "Brother" => {
             match race {
-                "Dwarf" => DWARVEN_MALE_NAMES[roll_die(102) as usize],
+                "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
+                "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
                 _ => "Jim",
             }
         },
         "Sister" => {
             match race {
-                "Dwarf" => DWARVEN_FEMALE_NAMES[roll_die(100) as usize],
+                "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
+                "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
                 _ => "Sue"
             }
         },

@@ -1,7 +1,10 @@
 use alignment::Alignment;
 use relationship::Relationship;
 
-use crate::names::dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES};
+use crate::names::{
+    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
+    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
+};
 
 use super::*;
 
@@ -147,10 +150,17 @@ pub fn ParentKnowledge() -> impl IntoView {
         _ => (race(), race()),
     };
 
-    let (dad_name, mom_name) = match race() {
-        "Dwarf" => (DWARVEN_MALE_NAMES[roll_die(102) as usize], DWARVEN_FEMALE_NAMES[roll_die(100) as usize]),
-        _ => ("Bob", "Megan"),
+    let dad_name = match race_dad {
+        "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
+        "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+        _ => "Frank",
     };
+
+    let mom_name = match race_mom {
+        "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
+        "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+        _ => "Miriam",
+};
 
     view! {
         <div>
