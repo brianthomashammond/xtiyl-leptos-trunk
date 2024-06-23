@@ -2,6 +2,7 @@ use crate::names::{
     dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
     elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
     halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES, HALFLING_SURNAMES},
+    human::{HUMAN_FEMALE_NAMES, HUMAN_MALE_NAMES, HUMAN_SURNAMES},
 };
 
 use super::*;
@@ -66,12 +67,14 @@ pub fn Race() -> impl IntoView {
             "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
             "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
             "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
+            "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
             _ => "Frank",
         },
         2 => match gen_race {
             "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
             "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
             "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
+            "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
             _ => "Miriam",
         }
         _ => unreachable!("player name gender failed")
@@ -81,6 +84,7 @@ pub fn Race() -> impl IntoView {
         "Dwarf" => DWARVEN_SURNAMES[(roll_die(100) - 1) as usize],
         "Elf" => ELVEN_SURNAMES[(roll_die(100) - 1) as usize],
         "Halfling" => HALFLING_SURNAMES[(roll_die(98) - 1) as usize],
+        "Human" => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
         _ => "Rhoades"
     };
 

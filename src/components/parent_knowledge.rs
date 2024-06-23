@@ -2,9 +2,10 @@ use alignment::Alignment;
 use relationship::Relationship;
 
 use crate::names::{
-    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
-    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
-    halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES, HALFLING_SURNAMES},
+    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES},
+    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES},
+    halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES},
+    human::{HUMAN_FEMALE_NAMES, HUMAN_MALE_NAMES},
 };
 
 use super::*;
@@ -155,6 +156,7 @@ pub fn ParentKnowledge() -> impl IntoView {
         "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
         "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
         "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
+        "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
         _ => "Frank",
     };
 
@@ -162,6 +164,7 @@ pub fn ParentKnowledge() -> impl IntoView {
         "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
         "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
         "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
+        "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
         _ => "Miriam",
 };
 
