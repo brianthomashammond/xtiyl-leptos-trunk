@@ -7,6 +7,7 @@ use crate::names::{
     halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES},
     human::{HUMAN_FEMALE_NAMES, HUMAN_MALE_NAMES},
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES},
+    gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES},
 };
 
 use super::*;
@@ -82,6 +83,7 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                 "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
                 "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                "Gnome" => GNOME_MALE_NAMES[(roll_die(98) - 1) as usize],
                 _ => "Jim",
             }
         },
@@ -92,6 +94,7 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                 "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
                 "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_FEMALE_NAMES[(roll_die(101) - 1) as usize],
+                "Gnome" => GNOME_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 _ => "Sue"
             }
         },
