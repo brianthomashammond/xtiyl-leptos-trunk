@@ -72,6 +72,11 @@ pub fn Race() -> impl IntoView {
             "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
             "Dragonborn" => DRAGONBORN_MALE_NAMES[(roll_die(101) - 1) as usize],
             "Gnome" => GNOME_MALE_NAMES[(roll_die(98) - 1) as usize],
+            "Half-Elf" => match roll_die(2) {
+                1 => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
+                _ => unreachable!("male half-elf name failed"),
+            },
             _ => "Frank",
         },
         2 => match gen_race {
@@ -81,6 +86,11 @@ pub fn Race() -> impl IntoView {
             "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
             "Dragonborn" => DRAGONBORN_FEMALE_NAMES[(roll_die(101) - 1) as usize],
             "Gnome" => GNOME_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+            "Half-Elf" => match roll_die(2) {
+                1 => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+                2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+                _ => unreachable!("female half-elf name failed"),
+            },
             _ => "Miriam",
         }
         _ => unreachable!("player name gender failed")
@@ -93,6 +103,11 @@ pub fn Race() -> impl IntoView {
         "Human" => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
         "Dragonborn" => DRAGONBORN_SURNAMES[(roll_die(104) - 1) as usize],
         "Gnome" => GNOME_SURNAMES[(roll_die(91) - 1) as usize],
+        "Half-Elf" => match roll_die(2) {
+            1 => ELVEN_SURNAMES[(roll_die(100) - 1) as usize],
+            2 => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
+            _ => unreachable!("half-elf surname failed"),
+        },
         _ => "Rhoades"
     };
 

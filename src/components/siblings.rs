@@ -84,6 +84,11 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                 "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_MALE_NAMES[(roll_die(101) - 1) as usize],
                 "Gnome" => GNOME_MALE_NAMES[(roll_die(98) - 1) as usize],
+                "Half-Elf" => match roll_die(2) {
+                    1 => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                    2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
+                    _ => unreachable!("brother half-elf name failed"),
+                },
                 _ => "Jim",
             }
         },
@@ -95,6 +100,11 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                 "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_FEMALE_NAMES[(roll_die(101) - 1) as usize],
                 "Gnome" => GNOME_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+                "Half-Elf" => match roll_die(2) {
+                    1 => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+                    2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+                    _ => unreachable!("sister half-elf name failed"),
+                },
                 _ => "Sue"
             }
         },
