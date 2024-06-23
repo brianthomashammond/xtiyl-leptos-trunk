@@ -2,12 +2,13 @@ use alignment::Alignment;
 use relationship::Relationship;
 
 use crate::names::{
-    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES},
-    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES},
+    dwarf::{DWARF_FEMALE_NAMES, DWARF_MALE_NAMES},
+    elf::{ELF_FEMALE_NAMES, ELF_MALE_NAMES},
     halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES},
     human::{HUMAN_FEMALE_NAMES, HUMAN_MALE_NAMES},
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES},
     gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES},
+    orc::{ORC_FEMALE_NAMES, ORC_MALE_NAMES},
 };
 
 use super::*;
@@ -78,32 +79,42 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
     match gender {
         "Brother" => {
             match race {
-                "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
-                "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                "Dwarf" => DWARF_MALE_NAMES[(roll_die(102) - 1) as usize],
+                "Elf" => ELF_MALE_NAMES[(roll_die(101) - 1) as usize],
                 "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
                 "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_MALE_NAMES[(roll_die(101) - 1) as usize],
                 "Gnome" => GNOME_MALE_NAMES[(roll_die(98) - 1) as usize],
                 "Half-Elf" => match roll_die(2) {
-                    1 => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                    1 => ELF_MALE_NAMES[(roll_die(101) - 1) as usize],
                     2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                     _ => unreachable!("brother half-elf name failed"),
+                },
+                "Half-Orc" => match roll_die(2) {
+                    1 => ORC_MALE_NAMES[(roll_die(90) - 1) as usize],
+                    2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
+                    _ => unreachable!("brother half-orc name failed"),
                 },
                 _ => "Jim",
             }
         },
         "Sister" => {
             match race {
-                "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
-                "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+                "Dwarf" => DWARF_FEMALE_NAMES[(roll_die(100) - 1) as usize],
+                "Elf" => ELF_FEMALE_NAMES[(roll_die(159) - 1) as usize],
                 "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
                 "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 "Dragonborn" => DRAGONBORN_FEMALE_NAMES[(roll_die(101) - 1) as usize],
                 "Gnome" => GNOME_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 "Half-Elf" => match roll_die(2) {
-                    1 => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+                    1 => ELF_FEMALE_NAMES[(roll_die(159) - 1) as usize],
                     2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                     _ => unreachable!("sister half-elf name failed"),
+                },
+                "Half-Orc" => match roll_die(2) {
+                    1 => ORC_FEMALE_NAMES[(roll_die(92) - 1) as usize],
+                    2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+                    _ => unreachable!("sister half-orc name failed"),
                 },
                 _ => "Sue"
             }

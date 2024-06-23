@@ -1,6 +1,6 @@
 use super::*;
 
-pub const ELVEN_MALE_NAMES: [&'static str; 101] = [
+pub const ELF_MALE_NAMES: [&'static str; 101] = [
     "Aelrion", "Baelor", "Caelhan", "Daerion", "Faerel", "Gaelin", 
     "Haemar", "Ithilion", "Jaelar", "Kaelen", "Laeroth", "Maelor", "Naerion", 
     "Oleran", "Paeris", "Raegor", "Saeros", "Taerion", "Ulinar", 
@@ -18,7 +18,7 @@ pub const ELVEN_MALE_NAMES: [&'static str; 101] = [
     "Elion", "Malorn", "Arannis", "Thalion", "Eldrin",
 ];
 
-pub const ELVEN_FEMALE_NAMES: [&'static str; 159] = [
+pub const ELF_FEMALE_NAMES: [&'static str; 159] = [
     "Aeliana", "Baelis", "Caelara", "Daerith", "Faelira", 
     "Haelora", "Ithilia", "Jaelira", "Kaelara", "Laerith", "Maelora", "Naelira", 
     "Olaris", "Paelina", "Raelis", "Saelara", "Taelith", "Ulinara", 
@@ -49,7 +49,7 @@ pub const ELVEN_FEMALE_NAMES: [&'static str; 159] = [
     "Nimara", "Oriara", "Phaelara", "Ravara",
 ];
 
-pub const ELVEN_SURNAMES: [&'static str; 100] = [
+pub const ELF_SURNAMES: [&'static str; 100] = [
     "Amarillis", "Braesilver", "Calaerion", "Duskryn", "Eldertree", "Felarion", 
     "Glimmerdew", "Hawkthorn", "Ilithor", "Jaderune", "Kaelithor", "Lunarain", 
     "Moonshadow", "Nimrathis", "Oakenshade", "Phaerlin", "Quilenor", "Raelithas", 

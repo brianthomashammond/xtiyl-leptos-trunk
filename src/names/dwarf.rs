@@ -1,6 +1,6 @@
 use super::*;
 
-pub const DWARVEN_MALE_NAMES: [&'static str; 102] = [
+pub const DWARF_MALE_NAMES: [&'static str; 102] = [
     "Bralgor", "Tharnok", "Dorgath", "Krunir", "Vorlund", "Gromden", "Halthor", 
     "Murden", "Falkrim", "Tharuk", "Harvek", "Baldrek", "Torvik", 
     "Durmak", "Kilgrim", "Garthen", "Vorund", "Thorek", "Mardin", "Brannik", 
@@ -18,7 +18,7 @@ pub const DWARVEN_MALE_NAMES: [&'static str; 102] = [
     "Borlin", "Tharik", "Grundin", "Durin", "Kragan", "Thrain",
 ];
 
-pub const DWARVEN_FEMALE_NAMES: [&'static str; 100] = [
+pub const DWARF_FEMALE_NAMES: [&'static str; 100] = [
     "Bryndis", "Thalara", "Gundri", "Marnis", "Dolvira", "Kelta", 
     "Vorgina", "Tharika", "Grimora", "Kavari", "Hildra", "Sigrin", "Dorella",
     "Brelia", "Torina", "Helmira", "Ulma", "Grendil", "Durila", 
@@ -36,7 +36,7 @@ pub const DWARVEN_FEMALE_NAMES: [&'static str; 100] = [
     "Herdra", "Krilin", "Torra", "Vandis", "Erynd", "Brennara", "Thaldis",
 ];
 
-pub const DWARVEN_SURNAMES: [&'static str; 100] = [
+pub const DWARF_SURNAMES: [&'static str; 100] = [
     "Stonehammer", "Ironfist", "Granitebeard", "Boulderfall", "Moltenstorm",
     "Frostshield", "Ironheart", "Stormaxe", "Rockbreaker", "Goldenshield", 
     "Stonebrow", "Thunderstone", "Strongarm", "Earthguard", "Slateshield",

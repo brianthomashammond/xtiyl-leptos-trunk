@@ -1,10 +1,11 @@
 use crate::names::{
-    dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
-    elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
+    dwarf::{DWARF_FEMALE_NAMES, DWARF_MALE_NAMES, DWARF_SURNAMES},
+    elf::{ELF_FEMALE_NAMES, ELF_MALE_NAMES, ELF_SURNAMES},
     halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES, HALFLING_SURNAMES},
     human::{HUMAN_FEMALE_NAMES, HUMAN_MALE_NAMES, HUMAN_SURNAMES},
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES, DRAGONBORN_SURNAMES},
     gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES, GNOME_SURNAMES},
+    orc::{ORC_FEMALE_NAMES, ORC_MALE_NAMES, ORC_SURNAMES},
 };
 
 use super::*;
@@ -66,30 +67,40 @@ pub fn Race() -> impl IntoView {
 
     let name = match roll_die(2) {
         1 => match gen_race {
-            "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
-            "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+            "Dwarf" => DWARF_MALE_NAMES[(roll_die(102) - 1) as usize],
+            "Elf" => ELF_MALE_NAMES[(roll_die(101) - 1) as usize],
             "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
             "Human" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
             "Dragonborn" => DRAGONBORN_MALE_NAMES[(roll_die(101) - 1) as usize],
             "Gnome" => GNOME_MALE_NAMES[(roll_die(98) - 1) as usize],
             "Half-Elf" => match roll_die(2) {
-                1 => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+                1 => ELF_MALE_NAMES[(roll_die(101) - 1) as usize],
                 2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                 _ => unreachable!("male half-elf name failed"),
+            },
+            "Half-Orc" => match roll_die(2) {
+                1 => ORC_MALE_NAMES[(roll_die(90) - 1) as usize],
+                2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
+                _ => unreachable!("male half-orc name failed"),
             },
             _ => "Frank",
         },
         2 => match gen_race {
-            "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
-            "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+            "Dwarf" => DWARF_FEMALE_NAMES[(roll_die(100) - 1) as usize],
+            "Elf" => ELF_FEMALE_NAMES[(roll_die(159) - 1) as usize],
             "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
             "Human" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
             "Dragonborn" => DRAGONBORN_FEMALE_NAMES[(roll_die(101) - 1) as usize],
             "Gnome" => GNOME_FEMALE_NAMES[(roll_die(95) - 1) as usize],
             "Half-Elf" => match roll_die(2) {
-                1 => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+                1 => ELF_FEMALE_NAMES[(roll_die(159) - 1) as usize],
                 2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 _ => unreachable!("female half-elf name failed"),
+            },
+            "Half-Orc" => match roll_die(2) {
+                1 => ORC_FEMALE_NAMES[(roll_die(92) - 1) as usize],
+                2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+                _ => unreachable!("female half-orc name failed"),
             },
             _ => "Miriam",
         }
@@ -97,16 +108,21 @@ pub fn Race() -> impl IntoView {
     };
 
     let surname = match gen_race {
-        "Dwarf" => DWARVEN_SURNAMES[(roll_die(100) - 1) as usize],
-        "Elf" => ELVEN_SURNAMES[(roll_die(100) - 1) as usize],
+        "Dwarf" => DWARF_SURNAMES[(roll_die(100) - 1) as usize],
+        "Elf" => ELF_SURNAMES[(roll_die(100) - 1) as usize],
         "Halfling" => HALFLING_SURNAMES[(roll_die(98) - 1) as usize],
         "Human" => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
         "Dragonborn" => DRAGONBORN_SURNAMES[(roll_die(104) - 1) as usize],
         "Gnome" => GNOME_SURNAMES[(roll_die(91) - 1) as usize],
         "Half-Elf" => match roll_die(2) {
-            1 => ELVEN_SURNAMES[(roll_die(100) - 1) as usize],
+            1 => ELF_SURNAMES[(roll_die(100) - 1) as usize],
             2 => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
             _ => unreachable!("half-elf surname failed"),
+        },
+        "Half-Orc" => match roll_die(2) {
+            1 => ORC_SURNAMES[(roll_die(98) - 1) as usize],
+            2 => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
+            _ => unreachable!("half-orc surname failed"),
         },
         _ => "Rhoades"
     };
