@@ -762,7 +762,7 @@ imports.wbg.__wbindgen_memory = function() {
     const ret = wasm.memory;
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper8489 = function(arg0, arg1, arg2) {
+imports.wbg.__wbindgen_closure_wrapper8490 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 391, __wbg_adapter_24);
     return addHeapObject(ret);
 };
@@ -804,7 +804,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('xtiyl-ea46142ce0e36d1e_bg.wasm', import.meta.url);
+        input = new URL('xtiyl-1b940a8107a79fdf_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

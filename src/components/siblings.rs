@@ -1,6 +1,8 @@
 use alignment::Alignment;
 use relationship::Relationship;
 
+use crate::names::dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES};
+
 use super::*;
 
 #[component]
@@ -48,9 +50,13 @@ pub fn Siblings() -> impl IntoView {
                             _ => unreachable!("sibling gender failed"),
                         }
                     });
+
+                    let name = sibling_name(gender(), race());
+
                     view! {
                         <hr />
                         <p>"Sibling: "{gender}</p>
+                        <p>"Name: " {name}</p>
                         <Alignment />
                         <SiblingAge />
                         <Relationship />
@@ -58,6 +64,24 @@ pub fn Siblings() -> impl IntoView {
                 }
             />
         </div>
+    }
+}
+
+pub fn sibling_name(gender: &str, race: &str) -> &'static str {
+    match gender {
+        "Brother" => {
+            match race {
+                "Dwarf" => DWARVEN_MALE_NAMES[roll_die(102) as usize],
+                _ => "Jim",
+            }
+        },
+        "Sister" => {
+            match race {
+                "Dwarf" => DWARVEN_FEMALE_NAMES[roll_die(100) as usize],
+                _ => "Sue"
+            }
+        },
+        _ => unreachable!{"sibling name gender failed"},
     }
 }
 
