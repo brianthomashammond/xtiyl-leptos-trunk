@@ -52,7 +52,7 @@ pub fn Family() -> impl IntoView {
 
     view! {
         <div>
-            <p>"Family: " {family}</p>
+            <p>"Family: "{family}</p>
         </div>
     }
 }

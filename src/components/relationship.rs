@@ -11,7 +11,7 @@ pub fn Relationship() -> impl IntoView {
 
     view! {
         <div>
-            <p>"Relationship: " {relationship}</p>
+            <p>"Relationship: "{relationship}</p>
         </div>
     }
 }

@@ -4,6 +4,7 @@ use relationship::Relationship;
 use crate::names::{
     dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES},
     elves::{ELVEN_FEMALE_NAMES, ELVEN_MALE_NAMES, ELVEN_SURNAMES},
+    halfling::{HALFLING_FEMALE_NAMES, HALFLING_MALE_NAMES, HALFLING_SURNAMES},
 };
 
 use super::*;
@@ -153,12 +154,14 @@ pub fn ParentKnowledge() -> impl IntoView {
     let dad_name = match race_dad {
         "Dwarf" => DWARVEN_MALE_NAMES[(roll_die(102) - 1) as usize],
         "Elf" => ELVEN_MALE_NAMES[(roll_die(101) - 1) as usize],
+        "Halfling" => HALFLING_MALE_NAMES[(roll_die(96) - 1) as usize],
         _ => "Frank",
     };
 
     let mom_name = match race_mom {
         "Dwarf" => DWARVEN_FEMALE_NAMES[(roll_die(100) - 1) as usize],
         "Elf" => ELVEN_FEMALE_NAMES[(roll_die(159) - 1) as usize],
+        "Halfling" => HALFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
         _ => "Miriam",
 };
 
@@ -229,8 +232,8 @@ pub fn ParentAge() -> impl IntoView {
 
     view! {
         <div>
-            <p>"Age: " {parent_age}</p>
-            <p>"Occupation: " {occupation}</p>
+            <p>"Age: "{parent_age}</p>
+            <p>"Occupation: "{occupation}</p>
         </div>
     }
 }

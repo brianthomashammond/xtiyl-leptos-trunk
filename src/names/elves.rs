@@ -15,7 +15,7 @@ pub const ELVEN_MALE_NAMES: [&'static str; 101] = [
     "Zaelion", "Aelor", "Baelrin", "Caelion", "Daelir", "Elorin", "Faelrin", 
     "Gaelion", "Haelith", "Ithrin", "Jaelrin", "Kaelion", "Laelir", "Maelion", 
     "Naelir", "Olaeris", "Paelrin", "Quaelor", "Raelthas", "Saelrin", "Taelion",
-    "Elion", "Malorn", "Arannis", "Thalion", "Eldrin"
+    "Elion", "Malorn", "Arannis", "Thalion", "Eldrin",
 ];
 
 pub const ELVEN_FEMALE_NAMES: [&'static str; 159] = [
@@ -66,5 +66,5 @@ pub const ELVEN_SURNAMES: [&'static str; 100] = [
     "Aldermist", "Briarshade", "Caladorn", "Duskfall", "Elarion", "Felathor", 
     "Glynarin", "Halethor", "Ilmaris", "Jorindel", "Kaelindor", "Lorien", 
     "Moonsong", "Nightwind", "Oakenfell", "Prylinor", "Quelindor", "Ravencrest", 
-    "Silversong", "Thrandor", "Ullorin", "Vaelithor"
+    "Silversong", "Thrandor", "Ullorin", "Vaelithor",
 ];

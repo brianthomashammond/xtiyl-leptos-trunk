@@ -1,0 +1,55 @@
+use super::*;
+
+pub const HALFLING_MALE_NAMES: [&'static str; 96] = [
+    "Alberic", "Berrin", "Carver", "Darin", "Eldon", "Fenwick", "Gavin", 
+    "Hobart", "Ivor", "Jasper", "Kelvin", "Linden", "Merrick", "Nestor", 
+    "Orin", "Perrin", "Quentin", "Roderic", "Samwell", "Tobin", "Ulric", 
+    "Vernon", "Wesley", "Xander", "Yorick", "Zan", "Arlin", "Bran", "Caden", 
+    "Derek", "Emory", "Felix", "Garret", "Hal", "Isen", "Jory", "Kester", 
+    "Lyle", "Milo", "Nyle", "Oscar", "Porter", "Quill", "Rafe", "Sterling", 
+    "Timon", "Upton", "Vick", "Wylan", "Xenon", "Yannis", "Zev", "Arlen", 
+    "Barret", "Crispin", "Dallin", "Edric", "Fenton", "Griffin", "Hart", 
+    "Innis", "Jonas", "Keaton", "Loris", "Merrill", "Nevin", "Oren", "Pippin", 
+    "Quinlan", "Rian", "Soren", "Tavian", "Uther", "Valen", "Warren", "Xenos", 
+    "Yarden", "Zeth", "Alden", "Bryce", "Corin", "Devin", "Eldrin", "Finn", 
+    "Gareth", "Holden", "Ives", "Keenan", "Loric", "Marin", "Nolan", 
+    "Oric", "Paxton", "Rylan", "Seb", "Tarin",
+];
+
+pub const HALFLING_FEMALE_NAMES: [&'static str; 94] = [
+    "Adalyn", "Brielle", "Calla", "Daphne", "Elara", "Fiona", "Gwyneth", 
+    "Hollis", "Iris", "Jocelyn", "Kaelin", "Leandra", "Mara", "Nerissa", 
+    "Ophelia", "Pippa", "Quinn", "Rilla", "Sable", "Tamsin", "Una", "Vera", 
+    "Willa", "Xanthe", "Yara", "Zinnia", "Adele", "Blythe", "Cassia", "Delia", 
+    "Evelyn", "Fiora", "Gemma", "Harper", "Inara", "Jessa", "Kira", "Liora", 
+    "Maeve", "Nola", "Orla", "Petra", "Quella", "Raina", "Selene", "Thalia", 
+    "Ursa", "Violet", "Wynne", "Xyla", "Yasmin", "Zara", "Anwen", "Bria", 
+    "Celine", "Dara", "Elise", "Freya", "Greta", "Hazel", "Ilara", "Juno", 
+    "Kendra", "Lyra", "Mira", "Nadia", "Phoebe", "Quina", "Risa", 
+    "Siena", "Tara", "Ulla", "Wren", "Xara", "Yelena", "Aislin", 
+    "Briar", "Carys", "Deirdre", "Ember", "Fauna", "Glenna", "Hestia", "Ida", 
+    "Jolie", "Keira", "Laurel", "Mabel", "Nia", "Odessa", "Priya", "Rowan", 
+    "Seren", "Tirza",
+];
+
+pub const HALFLING_SURNAMES: [&'static str; 98] = [
+    "Appleblossom", "Bramblefoot", "Cloverdew", "Dapplebrook", "Elderberry",
+    "Fiddlewhistle", "Greenbottle", "Hollyhock", "Ivyglade", "Jumbleberry",
+    "Kettlewhistle", "Lightfoot", "Merrygrove", "Nimblefingers", "Oakenshade",
+    "Pinebarrel", "Quickbeam", "Rosewood", "Softglow", "Tealeaf", "Underbough",
+    "Valewind", "Whisperwood", "Yewbark", "Ambergrain", "Brandybuck", "Cobbleskip",
+    "Dewhopper", "Evenwood", "Flintlock", "Glimmerstone", "Heathertop",
+    "Ironheart", "Jollyfield", "Keeneye", "Larkspur", "Mossheart", "Nettlebrook",
+    "Oatfield", "Puddlejumper", "Quicksilver", "Rivershine", "Silverleaf",
+    "Tallfellow", "Uplander", "Violetdew", "Waverunner", "Yellowtree",
+    "Acornhill", "Brightspark", "Cloudhopper", "Dewfoot", "Elderbloom",
+    "Featherwind", "Goldleaf", "Honeywhisper", "Ivyleaf", "Jovialbreeze",
+    "Kindleflame", "Leafwalker", "Mistymoor", "Nimblebrook", "Oakenfield",
+    "Pebblebrook", "Quickstep", "Riverstone", "Softwhisper", "Trueflight",
+    "Underhill", "Violetbreeze", "Wildflower", "Yellowbrook", "Alderbranch",
+    "Brookhollow", "Cindermoss", "Dewshine", "Evermeadow", "Foxglove",
+    "Glenrose", "Hilltopper", "Ironleaf", "Juniper", "Kindlewood", "Lavender",
+    "Moonshadow", "Nimbletoe", "Oakenhart", "Pinewhisper", "Quillbark",
+    "Rivertide", "Silvershadow", "Thistlebloom", "Upland", "Willowbranch",
+    "Yellowpetal", "Amberstream", "Cloverpatch", "Duskrunner",
+];
