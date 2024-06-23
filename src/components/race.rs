@@ -1,3 +1,5 @@
+use crate::names::dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES, DWARVEN_SURNAMES};
+
 use super::*;
 
 #[derive(Debug)]
@@ -55,9 +57,27 @@ pub fn Race() -> impl IntoView {
 
     set_race(gen_race);
 
+    let name = match roll_die(2) {
+        1 => match gen_race {
+            "Dwarf" => DWARVEN_MALE_NAMES[roll_die(102) as usize],
+            _ => "Frank",
+        },
+        2 => match gen_race {
+            "Dwarf" => DWARVEN_FEMALE_NAMES[roll_die(100) as usize],
+            _ => "Miriam",
+        }
+        _ => unreachable!("player name gender failed")
+    };
+
+    let surname = match gen_race {
+        "Dwarf" => DWARVEN_SURNAMES[roll_die(100) as usize],
+        _ => "Rhoades"
+    };
+
     view! {
         <div>
-            <p>"Race: " {race}</p>
+            <p>"Name: "{name}" "{surname}</p>
+            <p>"Race: "{race}</p>
         </div>
     }
 }

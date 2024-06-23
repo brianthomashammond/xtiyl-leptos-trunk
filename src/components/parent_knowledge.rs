@@ -1,6 +1,8 @@
 use alignment::Alignment;
 use relationship::Relationship;
 
+use crate::names::dwarves::{DWARVEN_FEMALE_NAMES, DWARVEN_MALE_NAMES};
+
 use super::*;
 
 #[derive(Debug)]
@@ -145,6 +147,11 @@ pub fn ParentKnowledge() -> impl IntoView {
         _ => (race(), race()),
     };
 
+    let (dad_name, mom_name) = match race() {
+        "Dwarf" => (DWARVEN_MALE_NAMES[roll_die(102) as usize], DWARVEN_FEMALE_NAMES[roll_die(100) as usize]),
+        _ => ("Bob", "Megan"),
+    };
+
     view! {
         <div>
             <p>"Parent Knowledge: "{parent_knowledge_text}</p>
@@ -152,11 +159,13 @@ pub fn ParentKnowledge() -> impl IntoView {
                 when=move || { parent_knowledge() }
             >
                 <p>"Mother's Race: "{race_mom}</p>
+                <p>"Name: "{mom_name}</p>
                 <Alignment />
                 <ParentAge />
                 <Relationship />
                 <hr />
                 <p>"Father's Race: "{race_dad}</p>
+                <p>"Name: "{dad_name}</p>
                 <Alignment />
                 <ParentAge />
                 <Relationship />

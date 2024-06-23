@@ -56,7 +56,7 @@ pub fn Siblings() -> impl IntoView {
                     view! {
                         <hr />
                         <p>"Sibling: "{gender}</p>
-                        <p>"Name: " {name}</p>
+                        <p>"Name: "{name}</p>
                         <Alignment />
                         <SiblingAge />
                         <Relationship />
