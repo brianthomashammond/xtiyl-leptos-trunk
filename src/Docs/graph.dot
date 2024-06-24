@@ -7,7 +7,7 @@ strict digraph flow {
 
     PlayerClassTraining [color=green, penwidth=4];
     Age [color=green, penwidth=4];
-    PlayerName [color=red, penwidth=4];
+    PlayerName [color=green, penwidth=4];
     PlayerRace [color=green, penwidth=4];
     Parents [color=green, penwidth=4];
     ChildhoodHome [color=green, penwidth=4];
@@ -17,7 +17,7 @@ strict digraph flow {
     ParentAge [color=green, penwidth=4];
     NonHumanParents [color=green, penwidth=4];
     ParentOccupation [color=green, penwidth=4];
-    ParentName [color=red, penwidth=4];
+    ParentName [color=green, penwidth=4];
     Family [color=orange, penwidth=4];
     Birthplace [color=green, penwidth=4];
     AbsentParent [color=red, penwidth=4];
@@ -27,7 +27,7 @@ strict digraph flow {
     LifeEvents [color=red, penwidth=4];
     SiblingBirthOrder [color=orange, penwidth=4];
     SiblingRelationship [color=green, penwidth=4];
-    SiblingName [color=red, penwidth=4];
+    SiblingName [color=green, penwidth=4];
     SiblingOccupation [color=green, penwidth=4];
     SiblingAlignment [color=green, penwidth=4];
     SiblingStatus [color=red, penwidth=4];
