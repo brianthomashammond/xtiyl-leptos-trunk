@@ -5,3 +5,4 @@ pub mod gnome;
 pub mod halfling;
 pub mod human;
 pub mod orc;
+pub mod tiefling;

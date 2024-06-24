@@ -6,6 +6,7 @@ use crate::names::{
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES, DRAGONBORN_SURNAMES},
     gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES, GNOME_SURNAMES},
     orc::{ORC_FEMALE_NAMES, ORC_MALE_NAMES, ORC_SURNAMES},
+    tiefling::{TIEFLING_FEMALE_NAMES, TIEFLING_MALE_NAMES, TIEFLING_SURNAMES},
 };
 
 use super::*;
@@ -83,7 +84,8 @@ pub fn Race() -> impl IntoView {
                 2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                 _ => unreachable!("male half-orc name failed"),
             },
-            _ => "Frank",
+            "Tiefling" => TIEFLING_MALE_NAMES[(roll_die(97) - 1) as usize],
+            _ => unreachable!("male player name failed"),
         },
         2 => match gen_race {
             "Dwarf" => DWARF_FEMALE_NAMES[(roll_die(100) - 1) as usize],
@@ -102,7 +104,8 @@ pub fn Race() -> impl IntoView {
                 2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                 _ => unreachable!("female half-orc name failed"),
             },
-            _ => "Miriam",
+            "Tiefling" => TIEFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
+            _ => unreachable!("female player name failed"),
         }
         _ => unreachable!("player name gender failed")
     };
@@ -124,8 +127,9 @@ pub fn Race() -> impl IntoView {
             2 => HUMAN_SURNAMES[(roll_die(100) - 1) as usize],
             _ => unreachable!("half-orc surname failed"),
         },
-        _ => "Rhoades"
-    };
+        "Tiefling" => TIEFLING_SURNAMES[(roll_die(88) - 1) as usize],
+        _ => unreachable!("player surname failed"),
+};
 
     view! {
         <div>

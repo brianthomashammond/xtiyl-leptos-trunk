@@ -9,6 +9,7 @@ use crate::names::{
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES},
     gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES},
     orc::{ORC_FEMALE_NAMES, ORC_MALE_NAMES},
+    tiefling::{TIEFLING_FEMALE_NAMES, TIEFLING_MALE_NAMES},
 };
 
 use super::*;
@@ -173,7 +174,9 @@ pub fn ParentKnowledge() -> impl IntoView {
             _ => unreachable!("dad half-orc name failed"),
         },
         "Orc" => ORC_MALE_NAMES[(roll_die(90) - 1) as usize],
-        _ => "Frank",
+        "Tiefling" | "Devil" => TIEFLING_MALE_NAMES[(roll_die(97) - 1) as usize],
+        "Human, dormant Infernal lineage" => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
+        _ => unreachable!("dad name failed"),
     };
 
     let mom_name = match race_mom {
@@ -194,7 +197,9 @@ pub fn ParentKnowledge() -> impl IntoView {
             _ => unreachable!("mom half-orc name failed"),
         },
         "Orc" => ORC_FEMALE_NAMES[(roll_die(92) - 1) as usize],
-        _ => "Miriam",
+        "Tiefling" | "Devil" => TIEFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
+        "Human, dormant Infernal lineage" => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
+        _ => unreachable!("mom name failed"),
 };
 
     view! {

@@ -9,6 +9,7 @@ use crate::names::{
     dragonborn::{DRAGONBORN_FEMALE_NAMES, DRAGONBORN_MALE_NAMES},
     gnome::{GNOME_FEMALE_NAMES, GNOME_MALE_NAMES},
     orc::{ORC_FEMALE_NAMES, ORC_MALE_NAMES},
+    tiefling::{TIEFLING_FEMALE_NAMES, TIEFLING_MALE_NAMES},
 };
 
 use super::*;
@@ -95,8 +96,9 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                     2 => HUMAN_MALE_NAMES[(roll_die(96) - 1) as usize],
                     _ => unreachable!("brother half-orc name failed"),
                 },
-                _ => "Jim",
-            }
+                "Tiefling" | "Devil" => TIEFLING_MALE_NAMES[(roll_die(97) - 1) as usize],
+                _ => unreachable!("brother name failed"),
+                    }
         },
         "Sister" => {
             match race {
@@ -116,8 +118,9 @@ pub fn sibling_name(gender: &str, race: &str) -> &'static str {
                     2 => HUMAN_FEMALE_NAMES[(roll_die(95) - 1) as usize],
                     _ => unreachable!("sister half-orc name failed"),
                 },
-                _ => "Sue"
-            }
+                "Tiefling" | "Devil" => TIEFLING_FEMALE_NAMES[(roll_die(94) - 1) as usize],
+                _ => unreachable!("sister name failed"),
+                    }
         },
         _ => unreachable!{"sibling name gender failed"},
     }
